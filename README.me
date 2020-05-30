@@ -10,7 +10,7 @@ To build it:
 $ git clone https://github.com/Colgaton/dcdns-server.git
 $ cd dcdns-server
 $ docker build -t dcdns .
-$ docker run -d -e HOSTIP=$IP -p 53:53/udp dcdns
+$ docker run --name dcdns -d -e HOSTIP=$IP -p 53:53/udp dcdns
 
 Where $IP is the IP from your docker host. It won't work without it.
 
