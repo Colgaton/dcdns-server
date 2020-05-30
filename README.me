@@ -1,0 +1,25 @@
+# dcdns-server
+
+Simple dns server for use with Dreamcast games servers.
+
+
+---
+
+To build it:
+
+$ git clone https://github.com/Colgaton/dcdns-server.git
+$ cd dcdns-server
+$ docker build -t dcdns .
+$ docker run -d -e HOSTIP=$IP -p 53:53/udp dcdns
+
+Where $IP is the IP from your docker host. It won't work without it.
+
+
+CAUTION: This is not a production ready dns server, use it only in your internal network.
+
+
+Dreamcast games servers: (you need them to work with this dns server)
+
+Chuchu Rocket! https://github.com/Colgaton/chuchu-game-server-docker
+4x4 Evo https://github.com/Colgaton/4x4evo-game-server-docker
+
