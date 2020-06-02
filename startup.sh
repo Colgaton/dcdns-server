@@ -7,6 +7,6 @@ if [ ! "$HOSTIP" ]; then
 fi
 
 cp /root/01-dreamcast.conf /etc/dnsmasq.d/
-sed -i s/192.168.0.155/$HOSTIP/g /etc/dnsmasq.d/01-dreamcast.conf
+sed -i s/MYIP/$HOSTIP/g /etc/dnsmasq.d/01-dreamcast.conf
 
 /etc/init.d/dnsmasq start
